@@ -57,15 +57,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="UserControls\CardControl.xaml">
+    <Page Include="Views\CardControlView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\HandControl.xaml">
+    <Page Include="Views\HandControlView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\PlayerControl.xaml">
+    <Page Include="Views\PlayerControlView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -78,17 +78,17 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BlackjackController.cs" />
-    <Compile Include="BlackjackObjects\BlackjackHand.cs" />
-    <Compile Include="BlackjackObjects\Card.cs" />
-    <Compile Include="BlackjackObjects\Player.cs" />
-    <Compile Include="UserControls\CardControl.xaml.cs">
-      <DependentUpon>CardControl.xaml</DependentUpon>
+    <Compile Include="ViewModels\CardControlViewModel.cs" />
+    <Compile Include="ViewModels\HandControlViewModel.cs" />
+    <Compile Include="ViewModels\PlayerControlViewModel.cs" />
+    <Compile Include="Views\CardControlView.xaml.cs">
+      <DependentUpon>CardControlView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\HandControl.xaml.cs">
-      <DependentUpon>HandControl.xaml</DependentUpon>
+    <Compile Include="Views\HandControlView.xaml.cs">
+      <DependentUpon>HandControlView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\PlayerControl.xaml.cs">
-      <DependentUpon>PlayerControl.xaml</DependentUpon>
+    <Compile Include="Views\PlayerControlView.xaml.cs">
+      <DependentUpon>PlayerControlView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BlackjackTableViewModel.cs" />
     <Compile Include="Views\BlackjackTableView.xaml.cs">
@@ -121,15 +121,26 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\KS.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\WPF.Base\WPF.csproj">
       <Project>{1484BA89-5958-464C-895F-96359F008C8B}</Project>
       <Name>WPF</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\1.png" />
+    <Resource Include="Images\10.png" />
+    <Resource Include="Images\11.png" />
+    <Resource Include="Images\12.png" />
+    <Resource Include="Images\13.png" />
+    <Resource Include="Images\2.png" />
+    <Resource Include="Images\3.png" />
+    <Resource Include="Images\4.png" />
+    <Resource Include="Images\5.png" />
+    <Resource Include="Images\6.png" />
+    <Resource Include="Images\7.png" />
+    <Resource Include="Images\8.png" />
+    <Resource Include="Images\9.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

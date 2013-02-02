@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Blackjack.ViewModels
+﻿namespace Blackjack.ViewModels
 {
-  public class BlackjackTableViewModel
+  using System;
+  using System.Collections.Generic;
+  using System.Linq;
+  using System.Text;
+  using WPF.ViewModels;
+
+  public class BlackjackTableViewModel : ViewModelBase
   {
   }
 }
