@@ -1,5 +1,6 @@
 ﻿namespace Blackjack.ViewModels
 {
+  using WPF.ViewModels;
 
   public class CardControlViewModel : ViewModelBase
   {

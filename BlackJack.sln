@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackjack", "BlackJack\Blackjack.csproj", "{F63DFC9B-AE16-4AFB-B8B6-44A1DDA27A6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF", "..\WPF.Base\WPF.csproj", "{1484BA89-5958-464C-895F-96359F008C8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF", "WPF.Base\WPF.csproj", "{1484BA89-5958-464C-895F-96359F008C8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

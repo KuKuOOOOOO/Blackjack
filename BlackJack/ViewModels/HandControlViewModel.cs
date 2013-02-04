@@ -1,6 +1,7 @@
 ﻿namespace Blackjack.ViewModels
 {
   using System.Collections.Generic;
+  using WPF.ViewModels;
 
   public class HandControlViewModel : ViewModelBase
   {

@@ -58,8 +58,23 @@
       VerticalAlignment="Bottom"
       Grid.Row="2" />
 
+    <StackPanel
+          Grid.Column="1"
+          Grid.Row="1"
+          Orientation="Horizontal">
 
-
+      <ItemsControl ItemsSource="{Binding Cards}">
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <Rectangle>
+              <Rectangle.Fill>
+                <ImageBrush ImageSource="{Binding ImageSource}" />
+              </Rectangle.Fill>
+            </Rectangle>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </StackPanel>
 
     <StackPanel
       Grid.Column="1"
@@ -96,23 +111,3 @@
 
   </Grid>
 </Window>
-
-<!--<StackPanel
-      Grid.Column="1"
-      Grid.Row="1"
-      Orientation="Horizontal">
-
-  <ItemsControl ItemsSource="{Binding Cards}">
-    <ItemsControl.ItemTemplate>
-      <DataTemplate>
-        <Rectangle>
-          <Rectangle.Fill>
-            <ImageBrush ImageSource="{Binding ImageSource}" />
-          </Rectangle.Fill>
-        </Rectangle>
-      </DataTemplate>
-    </ItemsControl.ItemTemplate>
-  </ItemsControl>
-
-
-</StackPanel>-->

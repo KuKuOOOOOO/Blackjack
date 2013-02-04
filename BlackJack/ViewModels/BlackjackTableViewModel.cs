@@ -1,10 +1,13 @@
 ﻿namespace Blackjack.ViewModels
 {
   using System.Collections.Generic;
+  using System.Windows.Input;
+  using WPF.ViewModels;
+  using WPF.AttachedCommandBehavior;
 
   public class BlackjackTableViewModel : ViewModelBase
   {
-    private List<CardControlViewModel> cards;
+    private List<CardControlViewModel> cards = new List<CardControlViewModel>();
     public List<CardControlViewModel> Cards
     {
       get
@@ -23,7 +26,7 @@
       }
     }
 
-    public static readonly SimpleCommand HitMeCommand = new SimpleCommand();
+    public static readonly RoutedCommand HitMeCommand = new RoutedCommand();
 
     public BlackjackTableViewModel()
     {
