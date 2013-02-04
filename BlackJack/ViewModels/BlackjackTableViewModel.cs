@@ -28,21 +28,19 @@
       }
     }
 
-    public SimpleCommand HitMeCommand;
+    public static readonly SimpleCommand HitMeCommand = new SimpleCommand();
 
     public BlackjackTableViewModel()
     {
-      HitMeCommand = new SimpleCommand();
-
-      this.CommandSink.RegisterCommand(HitMeCommand, CanHit, HitMe);
+      this.CommandSink.RegisterCommand(HitMeCommand, p => CanHit(), p => HitMe());
     }
 
-    public bool CanHit(object o)
+    public bool CanHit()
     {
       return true;
     }
 
-    public void HitMe(object o)
+    public void HitMe()
     {
       this.Cards.Add(new CardControlViewModel(1));
       this.OnPropertyChanged("Cards");

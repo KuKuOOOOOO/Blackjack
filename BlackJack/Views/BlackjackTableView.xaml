@@ -11,9 +11,9 @@
     <vm:BlackjackTableViewModel />
   </Window.DataContext>
   
-  <!--<Window.CommandBindings>
+  <Window.CommandBindings>
     <vmb:CommandSinkBinding Command="vm:BlackjackTableViewModel.HitMeCommand" />
-  </Window.CommandBindings>-->
+  </Window.CommandBindings>
 
   <Grid>
     <Grid.RowDefinitions>
@@ -41,7 +41,7 @@
     
     <Separator
       Grid.Row="0" 
-      VerticalAlignment="Top"/>
+      VerticalAlignment="Top"/> 
     <Separator
       Grid.Row="0" 
       VerticalAlignment="Bottom"/>
@@ -57,7 +57,7 @@
     <Separator
       VerticalAlignment="Bottom"
       Grid.Row="2" />
-    
+
 
 
 
@@ -73,7 +73,7 @@
         HorizontalAlignment="Stretch"
         FontSize="20"
         Margin="5"
-        Command="{Binding HitMeCommand}"/>
+        Command="vm:BlackjackTableViewModel.HitMeCommand"/>
       <Button
         Content="Double"
         VerticalAlignment="Stretch"
@@ -96,6 +96,7 @@
 
   </Grid>
 </Window>
+
 <!--<StackPanel
       Grid.Column="1"
       Grid.Row="1"

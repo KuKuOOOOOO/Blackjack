@@ -22,10 +22,11 @@
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
     
-    <Rectangle Grid.Column="1" Grid.Row="1">
+    
+  </Grid>
+</UserControl>
+<!--<Rectangle Grid.Column="1" Grid.Row="1">
       <Rectangle.Fill>
         <ImageBrush ImageSource="{Binding ImageSource}"/>
       </Rectangle.Fill>
-    </Rectangle>
-  </Grid>
-</UserControl>
+    </Rectangle>-->
