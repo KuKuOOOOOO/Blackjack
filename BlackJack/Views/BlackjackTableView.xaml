@@ -87,25 +87,52 @@
     <Separator
       VerticalAlignment="Bottom"
       Grid.Row="2" />
+    
+    <ListView
+        ItemsSource="{Binding Cards}"
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        Margin="5,30,5,30"
+        Grid.Column="1"
+        Grid.Row="1">
+      <ListView.View>
+        <GridView>
+          <GridViewColumn
+            Header="Name"
+            DisplayMemberBinding="{Binding Path=ImageSource}">
+            <!--<GridViewColumn.CellTemplate>
+              <DataTemplate>
+                <Label
+                    Content="{Binding
+                      Path=ImageSource}"/>
+              </DataTemplate>
+            </GridViewColumn.CellTemplate>-->
+          </GridViewColumn>
+        </GridView>
+      </ListView.View>
+    </ListView>
 
-    <StackPanel
-          Grid.Column="1"
-          Grid.Row="1"
-          Orientation="Horizontal">
-
-      <ItemsControl ItemsSource="{Binding Cards}">
-        <ItemsControl.ItemTemplate>
-          <DataTemplate>
-            <Rectangle>
-              <Rectangle.Fill>
-                <ImageBrush ImageSource="{Binding ImageSource}" />
-              </Rectangle.Fill>
-            </Rectangle>
-          </DataTemplate>
-        </ItemsControl.ItemTemplate>
-      </ItemsControl>
-    </StackPanel>
 
 
   </Grid>
 </Window>
+
+
+
+<!--<StackPanel
+          Grid.Column="1"
+          Grid.Row="1"
+          Orientation="Horizontal">
+
+  <ItemsControl ItemsSource="{Binding Cards}">
+    <ItemsControl.ItemTemplate>
+      <DataTemplate>
+        <Rectangle>
+          <Rectangle.Fill>
+            <ImageBrush ImageSource="{Binding ImageSource}" />
+          </Rectangle.Fill>
+        </Rectangle>
+      </DataTemplate>
+    </ItemsControl.ItemTemplate>
+  </ItemsControl>
+</StackPanel>-->

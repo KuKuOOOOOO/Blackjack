@@ -2,13 +2,15 @@
 {
   using System.Collections.Generic;
   using System.Windows.Input;
+
+  using Blackjack.DataObjects;
+
   using WPF.ViewModels;
-  using WPF.AttachedCommandBehavior;
 
   public class BlackjackTableViewModel : ViewModelBase
   {
-    private List<CardControlViewModel> cards = new List<CardControlViewModel>();
-    public List<CardControlViewModel> Cards
+    private List<Card> cards = new List<Card>();
+    public List<Card> Cards
     {
       get
       {
@@ -31,6 +33,7 @@
     public BlackjackTableViewModel()
     {
       this.CommandSink.RegisterCommand(HitMeCommand, p => CanHit(), p => HitMe());
+      this.Cards.Add(new Card(2));
     }
 
     public bool CanHit()
@@ -40,8 +43,11 @@
 
     public void HitMe()
     {
-      this.Cards.Add(new CardControlViewModel(1));
-      this.OnPropertyChanged("Cards");
+      List<Card> newList = new List<Card>(this.cards)
+        {
+          new Card(1)
+        };
+      this.Cards = newList;
     }
   }
 }

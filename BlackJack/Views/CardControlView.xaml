@@ -22,9 +22,9 @@
     </Grid.RowDefinitions>
     
     <Rectangle Grid.Column="1" Grid.Row="1">
-      <Rectangle.Fill>
+      <!--<Rectangle.Fill>
         <ImageBrush ImageSource="{Binding ImageSource}"/>
-      </Rectangle.Fill>
+      </Rectangle.Fill>-->
     </Rectangle>
   </Grid>
 </UserControl>
