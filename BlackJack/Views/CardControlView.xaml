@@ -4,10 +4,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:vmb="clr-namespace:WPF.ViewModels;assembly=WPF"
+    xmlns:vm="clr-namespace:Blackjack.ViewModels"
     mc:Ignorable="d"
-    DataContext="vm:CardControlViewModel"
     vmb:CommandSinkBinding.CommandSink="{Binding}">
+
+  <UserControl.CommandBindings>
+    
+  </UserControl.CommandBindings>
   
+  <UserControl.DataContext>
+    <vm:CardControlViewModel />
+  </UserControl.DataContext>
+
   <Grid>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="3*"/>
@@ -21,10 +29,15 @@
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
     
-    <Rectangle Grid.Column="1" Grid.Row="1">
-      <!--<Rectangle.Fill>
-        <ImageBrush ImageSource="{Binding ImageSource}"/>
-      </Rectangle.Fill>-->
-    </Rectangle>
+    <ItemsControl
+      ItemsSource="{Binding Card}">
+      <Rectangle
+        Grid.Column="1"
+        Grid.Row="1">
+        <Rectangle.Fill>
+          <ImageBrush ImageSource="{Binding Path=ImageSource}"/>
+        </Rectangle.Fill>
+      </Rectangle>
+    </ItemsControl>
   </Grid>
 </UserControl>

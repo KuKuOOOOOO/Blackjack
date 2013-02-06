@@ -15,6 +15,14 @@
     <vmb:CommandSinkBinding Command="vm:BlackjackTableViewModel.HitMeCommand" />
   </Window.CommandBindings>
 
+    <!--<Rectangle
+        Grid.Column="1"
+        Grid.Row="1">
+      <Rectangle.Fill>
+        <ImageBrush ImageSource="{Binding Path=ImageSource}"/>
+      </Rectangle.Fill>
+    </Rectangle>-->
+  
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="*" />
@@ -87,7 +95,20 @@
     <Separator
       VerticalAlignment="Bottom"
       Grid.Row="2" />
-    
+
+    <!--<ItemsControl
+      ItemsSource="{Binding Cards}"
+      Grid.Column="1"
+      Grid.Row="0">
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <StackPanel>
+            <Image Source="{Binding Path=ImageSource}" />
+          </StackPanel>
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+    </ItemsControl>-->
+
     <ListView
         ItemsSource="{Binding Cards}"
         HorizontalAlignment="Stretch"
@@ -100,13 +121,11 @@
           <GridViewColumn
             Header="Name"
             DisplayMemberBinding="{Binding Path=ImageSource}">
-            <!--<GridViewColumn.CellTemplate>
+            <GridViewColumn.CellTemplate>
               <DataTemplate>
-                <Label
-                    Content="{Binding
-                      Path=ImageSource}"/>
+                
               </DataTemplate>
-            </GridViewColumn.CellTemplate>-->
+            </GridViewColumn.CellTemplate>
           </GridViewColumn>
         </GridView>
       </ListView.View>
