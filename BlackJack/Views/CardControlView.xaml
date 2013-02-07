@@ -7,37 +7,10 @@
     xmlns:vm="clr-namespace:Blackjack.ViewModels"
     mc:Ignorable="d"
     vmb:CommandSinkBinding.CommandSink="{Binding}">
-
-  <UserControl.CommandBindings>
-    
-  </UserControl.CommandBindings>
   
   <UserControl.DataContext>
     <vm:CardControlViewModel />
   </UserControl.DataContext>
 
-  <Grid>
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="3*"/>
-      <ColumnDefinition Width="2*"/>
-      <ColumnDefinition Width="3*"/>
-    </Grid.ColumnDefinitions>
-
-    <Grid.RowDefinitions>
-      <RowDefinition Height="*" />
-      <RowDefinition Height="4*" />
-      <RowDefinition Height="*" />
-    </Grid.RowDefinitions>
-    
-    <ItemsControl
-      ItemsSource="{Binding Card}">
-      <Rectangle
-        Grid.Column="1"
-        Grid.Row="1">
-        <Rectangle.Fill>
-          <ImageBrush ImageSource="{Binding Path=ImageSource}"/>
-        </Rectangle.Fill>
-      </Rectangle>
-    </ItemsControl>
-  </Grid>
+  <Image Source="{Binding Path=ImageSource}" />
 </UserControl>
